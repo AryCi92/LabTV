@@ -1,0 +1,194 @@
+.contain {
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "logout"
+    "h3"
+    "h4"
+    "aside"
+    "main";
+}
+
+.logout {
+    grid-area: logout;
+    width: 70px;
+    height: 27px;
+    background-color: #ef4047;
+    border-radius: 5px;
+    border: solid 2px transparent;
+    margin-left: 78%;
+    transition: .3s;
+}
+
+.logout a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.logout:hover, .film button:hover{
+    border: solid 2px #fff;
+}
+
+h3 {
+    grid-area: h3;
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+h4 {
+    grid-area: h4;
+    text-align: center;
+}
+
+.aside {
+    grid-area: aside;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(41, 41, 41, 0.856);
+    border-radius: 5px;
+}
+
+.aside ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.aside li{
+    cursor: pointer;
+}
+
+.aside li:hover{
+    color: #ef4047;
+}
+
+.main {
+    grid-area: main;
+}
+
+.film ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.film ul li{
+    border-radius: 5px;
+    background-color: rgba(41, 41, 41, 0.856);
+    padding: 20px;
+    margin: 20px;
+}
+
+.film ul img {
+    width: 137px;
+    height: 190px;
+    display: block;
+}
+
+.film button{
+    width: 100px;
+    height: 27px;
+    color: #fff;
+    background-color: #ef4047;
+    border-radius: 5px;
+    border: solid 2px transparent;
+    display: block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dati {
+    background-color: rgba(41, 41, 41, 0.856);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.dati ul{
+    list-style: none;
+}
+
+.dati li{
+    line-height: 3em;
+}
+
+.message{
+    background-color: rgba(41, 41, 41, 0.856);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width:768px){
+    .logout{
+        margin-left: 90%;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .logout{
+        margin-left: 93%;
+    }
+
+    .container {
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logout logout"
+        "h3 h3"
+        "h4 h4"
+        "aside main";
+    }
+
+    .aside{
+        min-height: 100vh;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .aside ul {
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-top: 20px;
+    }
+
+    .aside li{
+        border: solid 1px rgba(255, 255, 255, 0.188);
+        width: 100%;
+        line-height: 4em;
+        border-radius: 5px;
+        padding-left: 20px;
+        transition: .5s;
+    }
+
+    .aside li:hover{
+        background-color: rgba(255, 255, 255, 0.063);
+    }
+
+    h4{
+        margin-bottom: 30px;
+    }
+
+    .film ul{
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .container{
+        grid-template-columns: 25% 75%;
+    }
+
+    .logout{
+        margin-left: 95%;
+    }
+}

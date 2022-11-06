@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'icon';
+    src: url('./assets/font/icon.woff2') format('woff2'),
+         url('./assets/font/icon.woff') format('woff'),
+         url('./assets/font/icon.ttf') format('ttf');
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #161616;
+}

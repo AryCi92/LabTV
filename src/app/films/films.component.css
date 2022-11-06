@@ -1,0 +1,66 @@
+.filmSlider{
+    margin-top: 5px;
+}
+
+.button{
+    font-family:  'icon';
+    color: rgba(255, 255, 255, 0.733);
+    height: 100%;
+    width: 40px;
+    line-height: 250px;
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.prev{
+    left: 0px;
+}
+
+.next{
+    right: 0px;
+}
+
+.button:hover{
+    background-color: rgba(17, 17, 17, 0.682);;
+}
+
+h3{
+    color: #fff;
+    margin: 0 20px;
+}
+
+.sliderContainer{
+    margin: 0 auto;
+    position: relative;
+    height: 250px;
+    width: 100%;
+    z-index: 1;
+}
+
+.sliderBox{
+    height: 250px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 0 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+img{
+    display: block;
+    width: 145px;
+    height: 200px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .5s;
+    z-index: 2;
+}
+
+img:hover{
+    transform: scale(1.1);
+}

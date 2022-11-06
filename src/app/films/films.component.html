@@ -1,0 +1,69 @@
+<div class="filmSlider">
+
+    <h3>Nuove uscite</h3>
+    <div class="sliderContainer">
+
+        <div class="sliderBox">
+
+            <div class="slide" *ngFor="let nu of nuoveUscite">
+                <a [routerLink]="['/film-detail', nu.id]"><img [src]="nu.image"></a>
+            </div>
+
+        </div>
+
+        <div class="prev button" appPrevButton>o</div>
+        <div class="next button" appNextButton>n</div>
+    </div>
+
+<!--------------------------------------------------------------------->
+
+    <h3>I più visti</h3>
+    <div class="sliderContainer">
+
+        <div class="sliderBox">
+
+            <div class="slide" *ngFor="let pv of piuVisti">
+                <a [routerLink]="['/film-detail', pv.id]"><img [src]="pv.image"></a>
+            </div>
+
+        </div>
+
+        <div class="prev button" appPrevButton>o</div>
+        <div class="next button" appNextButton>n</div>
+    </div>
+
+<!--------------------------------------------------------------------->
+
+    <h3>Premiati dalla critica</h3>
+    <div class="sliderContainer">
+
+        <div class="sliderBox">
+
+            <div class="slide" *ngFor="let pr of premiati">
+                <a [routerLink]="['/film-detail', pr.id]"><img [src]="pr.image"></a>
+            </div>
+
+        </div>
+
+        <div class="prev button" appPrevButton>o</div>
+        <div class="next button" appNextButton>n</div>
+    </div>
+
+<!--------------------------------------------------------------------->
+
+    <h3>Campioni d'incassi</h3>
+    <div class="sliderContainer">
+
+        <div class="sliderBox">
+
+            <div class="slide" *ngFor="let ci of incassi">
+                <a [routerLink]="['/film-detail', ci.id]"><img [src]="ci.image"></a>
+            </div>
+
+        </div>
+
+        <div class="prev button" appPrevButton>o</div>
+        <div class="next button" appNextButton>n</div>
+    </div>
+
+</div>    

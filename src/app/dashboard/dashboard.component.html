@@ -1,0 +1,41 @@
+<div class="contain">
+
+    <div class="container">
+
+        <button type="button" class="logout"><a href="javascript:localStorage.clear(); location.href='/login'">Logout</a></button>
+
+        <h3>Benvenuto nella tua area riservata!</h3>
+
+        <h4>Utente "{{userData.username}}"</h4>
+
+        <div class="aside">
+            <ul>
+                <li (click)="getFilm()">Film acquistati</li>
+                <li (click)="getData()">I tuoi dati</li>
+            </ul>
+        </div>
+
+        <div class="main">
+        <div class="film" *ngIf="isFilmVisible">
+            <ul>
+                <li *ngFor="let film of filmAcquistati">
+                    <img [src]="film.image">
+                    <button (click)="deleteFilm(film)">Restituisci</button>
+                </li>
+            </ul>
+            <div class="message" *ngIf="isMessageVisible">Non hai acquistato nessun film.</div>
+        </div>
+
+        <div class="dati" *ngIf="isDatiVisible">
+            <ul>
+                <li><strong> Username:</strong> {{userData.username}}</li>
+                <li><strong>Email:</strong> {{userData.email}}</li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+
+
+</div>

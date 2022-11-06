@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div id="contact">
+
+        <h2>Contattaci</h2>
+
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" *ngIf="isRegisterVisible">
+
+            <input type="text" name="nome" placeholder="Nome*" ngModel required pattern="[a-zA-Z]+$">
+            <span></span>
+
+            <input type="text" name="email" placeholder="Email*" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <span></span>
+
+            <input type="text" name="tel" placeholder="Telefono*" ngModel required pattern="^((00|\+)39[\. ]??)??3\d{2}[\. ]??\d{6,7}$">
+            <span></span>
+
+            <textarea placeholder="Messaggio*" name="text" ngModel required></textarea>
+            <span></span>
+
+            <input type="checkbox" id="checkbox" name="checkbox" ngModel required>
+            <label for="privacy">Accetto l'informativa sulla privacy</label>
+            <span></span>
+
+            <button type="submit" [disabled]="!contactForm.valid">INVIA</button>
+
+        </form>
+
+        <div id="message" *ngIf="isMessageVisible">Il tuo messaggio è stato inviato!</div>
+
+    </div>
+
+</div>

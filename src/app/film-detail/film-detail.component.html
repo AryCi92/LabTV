@@ -1,0 +1,52 @@
+<div class="detail">
+
+    <div class="container">
+
+        <img [src]="film.image">
+
+        <ul>
+            <li class="title">
+                <h3>{{film.title}}</h3>
+            </li>
+            <li class="description">
+                <h5>TRAMA</h5>
+                <p>{{film.plot}}</p>
+            </li>
+            <li class="genre">
+                <h5>GENERE</h5>
+                <p>{{film.genres}}</p>
+            </li>
+            <li class="regia">
+                <h5>REGIA</h5>
+                <p>{{film.directors}}</p>
+            </li>
+            <li class="cast">
+                <h5>CAST</h5>
+                <p>{{film.stars}}</p>
+            </li>
+        </ul>
+        <div class="buttons">
+            <button type="button" class="btnTrailer" (click)="getTrailer()">Guarda il Trailer</button>
+            <button type="button" (click)="addFilm(film)">Acquista</button>
+            <span *ngIf="isSpanVisible">Aggiunto alla tua lista di acquisti</span>
+        </div>
+
+    </div>
+
+    <h2>Altri contenuti simili</h2>
+
+    <ul class="similar">
+        <li *ngFor="let similar of film.similars">
+            <a [routerLink]="['/film-detail', similar.id]" (click)="getSimilarFilmDetail(similar.id)"><img [src]="similar.image"></a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="trailer" *ngIf="isTrailerVisible">
+    <div class="close" (click)="close()">X</div>
+    <div class="myMessage" *ngIf="isMyMessageVisible">Trailer non disponibile.</div>
+    <div class="contain">
+        <iframe [src]="Safeurl" frameBorder="0"></iframe>
+    </div>
+</div>

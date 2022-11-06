@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="top">
+
+        <h3>Il nostro catalogo</h3>
+
+        <div class="search">
+            <input type="text" placeholder="Cerca" [(ngModel)]="term">
+        </div>
+
+    </div>
+
+    <ul>
+        <li *ngFor="let film of films |filter:term">
+            <a [routerLink]="['/film-detail', film.id]"><img [src]="film.image"></a>
+        </li>
+    </ul>
+
+</div>

@@ -1,0 +1,17 @@
+img{
+    width: 100%;
+    display: block;
+}
+
+.image{
+    position: relative;
+}
+
+.line{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1%;
+    height: 50px;
+    background: linear-gradient(to top, #161616 40%, rgba(18, 18, 18, 0.032));
+}

@@ -1,0 +1,178 @@
+nav{
+    background-color:  #111;
+    display: flex;
+    flex-direction: column;
+}
+
+span, label {
+    font-family: 'icon';
+}
+
+img{
+    width: 150px;
+    display: block;
+}
+
+.header a{
+    display: block;
+    margin: 1% 2%;
+}
+
+label{
+    display: block;
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+    line-height: 2em;
+    margin-left: 45%;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+#menù{
+    display: none;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a{
+    display: block;
+    padding: 2%;
+    font-size: 1.1em;
+    transition: .3s;
+}
+
+.menu li:first-child a{
+    border-top: 1px solid #333;
+}
+
+.menu a:hover{
+    background-color: #222;
+}
+
+.container{
+    max-height: 0;
+    overflow: hidden;
+    transition: .8s;
+}
+
+#menù:checked ~ .container{
+    max-height: 50em;
+}
+
+@media screen and (min-width:480px) {
+    label{
+        margin-left: 55%;
+    }
+}
+
+@media screen and (min-width:768px){
+    label{
+        margin-left: 67%;
+    }
+}
+
+@media screen and (min-width:900px){
+    label{
+        margin-left: 70%;
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .header a{
+        padding: 2% 4%;
+    }
+
+    label{
+        display: none;
+    }
+
+    .container{
+        max-height: 50em;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    nav{
+        flex-direction: row;
+    }
+
+    .header{
+        width: 18vw;
+    }
+
+    .menu{
+        width: 100%;
+    }
+
+    .menu ul{
+        display: flex;
+        align-items: center;  
+    }
+
+    .menu li{
+        width: 13%;
+        margin-right: 10px;
+    }
+
+    .menu li:first-child a{
+        border-top: none;
+    }
+
+    .menu li:last-child{
+        width: 43%;
+        margin-right: 0;
+    }
+
+    .menu li:last-child a{
+        margin-left: 90%;
+        width: 10%;
+        text-align: right;
+    }
+
+    .menu a{
+        text-align: center;
+        font-size: 1.1em;
+        transition: .3s;
+    }
+
+    .menu a:hover{
+        text-decoration: underline;
+        background-color: transparent;
+    }
+
+    .menu li:last-child a:hover{
+        text-decoration: none;
+        color: #ef4047;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .header{
+        width: 14vw;
+    }
+
+    .menu a{
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+

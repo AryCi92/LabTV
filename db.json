@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "email": "arianna.ciriano@hotmail.com",
+      "password": "$2a$10$.gtuvvs/1ogZrTD5EAgxUusuwHoXZUtSmD3Gio/h9pe1O2bA82oru",
+      "username": "Ary101",
+      "id": 1
+    },
+    {
+      "email": "arianna.cipriano92@gmail.com",
+      "password": "$2a$10$IBohuolfZkMKF3QHrQ6ZKuJrLim0Z8RMTH0wh0gbGmyoXll4IsLR6",
+      "username": "Arianna",
+      "id": 2
+    }
+  ],
+  "posts": [],
+  "films-acquistati": [
+    {
+      "userId": "1",
+      "title": "Don't Worry Darling",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzFkMWUzM2ItZWFjMi00NDY0LTk2MDMtZDhkMDE2MjRlYmZlXkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_Ratio0.6762_AL_.jpg",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "title": "Blonde",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDk2YTA1MGYtMGNjMi00YTJlLWI1YjItMjBjOGJlZGIwZmYzXkEyXkFqcGdeQXVyODA0MjgyNzM@._V1_Ratio0.6762_AL_.jpg",
+      "id": 3
+    },
+    {
+      "userId": "2",
+      "title": "Creed III",
+      "image": "https://m.media-amazon.com/images/M/MV5BZDNlZmRkM2UtZTBiYy00YTlhLThkZmEtM2YwY2FkMTUwZjViXkEyXkFqcGdeQXVyMTMzNDE5NDM2._V1_Ratio0.6762_AL_.jpg",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "title": "Halloween Ends",
+      "image": "https://m.media-amazon.com/images/M/MV5BZTg1Y2Q3MzctMDlkOS00OGE1LWE4MjUtNmJjNDNkZmM2YmVkXkEyXkFqcGdeQXVyMjY5ODI4NDk@._V1_Ratio0.6762_AL_.jpg",
+      "id": 5
+    }
+  ]
+}

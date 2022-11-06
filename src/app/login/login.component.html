@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div id="login" *ngIf="isLoginVisible">
+
+        <h2>Login</h2>
+
+        <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin(loginForm)">
+
+            <input type="text" placeholder="Email" name="email" ngModel required>
+            <span></span>
+
+            <input type="password" placeholder="Password" name="password" ngModel required>
+            <span></span>
+
+            <button type="submit" [disabled]="!loginForm.valid">ACCEDI</button>
+
+        </form>
+
+        <div class="loginMessage" *ngIf="isLoginMessageVisible">
+            <p>Dati utente non corretti. Riprova!</p>
+        </div>
+
+        <ul>
+            <li>
+                <p>Non sei ancora registrato?</p>
+            </li>
+            <li><button (click)="showRegister()">REGISTRATI</button></li>
+        </ul>
+
+    </div> <!--login-->
+
+    <div id="registrazione" *ngIf="isRegisterVisible">
+
+        <h5 (click)="back()">&#171;Indietro</h5>
+
+        <h2>Registrazione</h2>
+
+        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister(registerForm)">
+
+            <input type="text" placeholder="Email" name="email" ngModel required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <span></span>
+
+            <input type="text" placeholder="Username" name="username" ngModel required>
+            <span></span>
+
+            <input type="password" placeholder="Password" id="password" name="password" ngModel required
+                pattern="^(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            <span></span>
+
+            <input type="checkbox" id="checkbox" name="checkbox" ngModel required>
+            <label for="checkbox">Accetto l'informativa sulla privacy</label>
+
+            <button type="submit" [disabled]="!registerForm.valid">REGISTRATI</button>
+
+        </form>
+
+    </div> <!--registrazione-->
+
+    <div class="myMessage" *ngIf="isRegisterMessageVisible">
+        <p>Registrazione effettuata con successo.</p>
+        <p>Effettua il <a (click)="back()">login</a> per iniziare ad acquistare i tuoi film preferiti.</p>
+    </div>
+
+</div> <!--container-->
